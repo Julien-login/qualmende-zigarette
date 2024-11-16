@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qualmende Zigarette</title>
+    <title>Rauchfrei Rechner</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cigarette-container">
-        <div class="cigarette">
-            <div class="ash"></div>
-            <div class="body"></div>
-            <div class="filter"></div>
+    <div class="container">
+        <!-- Eingabefelder -->
+        <div class="input-section">
+            <h2>Start</h2>
+            <label>Heute: <span id="today-date"></span></label><br><br>
+
+            <label>Rauchstopp-Datum (tt.mm.jjjj):</label>
+            <input type="text" id="stop-date" placeholder="tt.mm.jjjj"><br><br>
+
+            <label>Zigaretten pro Tag:</label>
+            <input type="number" id="cigarettes-per-day" placeholder="Zigaretten"><br><br>
+
+            <label>Kosten pro Schachtel (€):</label>
+            <input type="number" id="cost-per-pack" step="0.01" placeholder="z.B. 7.50"><br><br>
+
+            <label>Anzahl Zigaretten pro Schachtel:</label>
+            <input type="number" id="cigarettes-per-pack" placeholder="z.B. 20"><br><br>
         </div>
-        <div class="smoke">
-            <div class="smoke-element"></div>
-            <div class="smoke-element"></div>
-            <div class="smoke-element"></div>
+
+        <!-- Ausgabe -->
+        <div class="output-section">
+            <div id="congrats-message">
+                <p>Glückwunsch! Du bist <span id="days-free">0</span> Tage rauchfrei 😊</p>
+                <p>Seitdem hast du <span id="money-saved">0.00</span> € gespart!</p>
+            </div>
+            <div id="progress-bar-container">
+                <p>Fortschritt bis zur Zellenerneuerung (7 Jahre):</p>
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div id="co2-saved">
+                <p>Du hast bereits <span id="co2-amount">0.00</span> kg CO₂ eingespart 🌳</p>
+            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

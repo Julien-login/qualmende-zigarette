@@ -1,88 +1,66 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.cigarette-container {
-    position: relative;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-.cigarette {
-    display: flex;
-    width: 300px;
+.input-section, .output-section {
+    width: 40%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#congrats-message {
+    margin-bottom: 20px;
+}
+
+#progress-bar-container {
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    width: 100%;
     height: 30px;
+    background: #ddd;
     border-radius: 5px;
     overflow: hidden;
-    position: relative;
 }
 
-.ash {
-    width: 20px;
-    background: #4d4d4d;
-    border-right: 2px solid #b3b3b3;
+#progress {
+    height: 100%;
+    background: #4caf50;
+    width: 0%;
 }
 
-.body {
-    flex: 1;
-    background: linear-gradient(to right, #e0e0e0, #f2f2f2);
-}
-
-.filter {
-    width: 40px;
-    background: linear-gradient(to right, #f3a54a, #c97a28);
-    border-left: 2px solid #b55a1d;
-}
-
-.smoke {
-    position: absolute;
-    top: -100px;
-    left: 20px;
-    width: 300px;
-    height: 200px;
-    pointer-events: none;
-}
-
-.smoke-element {
-    position: absolute;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
-    border-radius: 50%;
-    animation: smoke-rise 3s infinite ease-in-out;
-    opacity: 0;
-}
-
-.smoke-element:nth-child(1) {
-    left: 40%;
-    animation-delay: 0s;
-}
-
-.smoke-element:nth-child(2) {
-    left: 30%;
-    animation-delay: 1s;
-}
-
-.smoke-element:nth-child(3) {
-    left: 50%;
-    animation-delay: 2s;
-}
-
-@keyframes smoke-rise {
-    0% {
-        transform: translateY(50px) scale(0.5);
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(-200px) scale(2);
-        opacity: 0;
-    }
+#co2-saved {
+    margin-top: 20px;
 }
