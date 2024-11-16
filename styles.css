@@ -39,12 +39,17 @@ input {
     border-radius: 4px;
 }
 
-#congrats-message {
-    margin-bottom: 20px;
+button {
+    padding: 10px 15px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-#progress-bar-container {
-    margin-bottom: 20px;
+button:hover {
+    background: #45a049;
 }
 
 #progress-bar {
@@ -59,8 +64,4 @@ input {
     height: 100%;
     background: #4caf50;
     width: 0%;
-}
-
-#co2-saved {
-    margin-top: 20px;
 }
