@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualmende Zigarette</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cigarette">
+        <div class="cigarette-body"></div>
+        <div class="cigarette-glow"></div>
+        <div class="smoke"></div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-button" data-tab="smoking">Rauchen</button>
+        <button class="tab-button" data-tab="secret">Secret Project</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content active" id="smoking">
+        <!-- Der bestehende Inhalt der Rauchen-Seite bleibt hier -->
+    </div>
+
+    <div class="tab-content" id="secret">
+        <div class="password-container">
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" placeholder="Gib das Passwort ein">
+            <button id="password-submit">Submit</button>
+            <p id="password-error" style="color: red; display: none;">Falsches Passwort!</p>
+        </div>
+        <div id="secret-content" style="display: none;">
+            <h2>Secret Project</h2>
+            <p>Hier kommt dein geheimes Projekt.</p>
+        </div>
+    </div>
+</body>
+</html>
