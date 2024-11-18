@@ -38,9 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Standardmäßig den Rauchen-Tab anzeigen
-    document.querySelector('.tab-button[data-tab="smoking"]').click();
-
     // Funktion zum Hashen des Passworts
     async function hashPassword(password) {
         const encoder = new TextEncoder();
@@ -50,4 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .map(byte => byte.toString(16).padStart(2, '0'))
             .join('');
     }
+
+    // Standardmäßig den Rauchen-Tab anzeigen
+    document.querySelector('.tab-button[data-tab="smoking"]').click();
 });
